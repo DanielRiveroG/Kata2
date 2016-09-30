@@ -9,12 +9,11 @@ public class Kata2 {
         //Double[] array = {1.1,4.3,7.4,1.1,1.2,8.2,4.4,1.2,4.3,9.5};
         String[] array = {"Pepe", "Juan", "Pepe", "Dani", "Pepe"};
         
-        Histogram histo = new Histogram(array);
+        Histogram<String> histo = CalculateHistogram.computeHistogram(array);
         
-        HashMap <Object,Integer> histogram = histo.getHistogram();
         
-        for(Object key: histogram.keySet()){
-            System.out.println(key + "->" + histogram.get(key));
+        for(Object key: histo.keySet()){
+            System.out.println(key + "->" + histo.get(key));
         }
     }
 }
